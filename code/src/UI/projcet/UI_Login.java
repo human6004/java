@@ -1,4 +1,4 @@
-package UI;
+package UI.projcet;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,9 +18,10 @@ public class UI_Login {
 
         // chỗ nhập text từ bàn phím
         JTextField name = new JTextField("");
-        JTextField pass = new JTextField();
+        JPasswordField password = new JPasswordField();
+//        JPasswordField
         name.setBounds(170,150,150,20);
-        pass.setBounds(170,200,150,20);
+        password.setBounds(170,200,150,20);
 
         //nút bấm
         JButton login = new JButton("Login");
@@ -33,7 +34,8 @@ public class UI_Login {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(name.getText());
-                System.out.println(pass.getText());
+                String s = String.valueOf(password.getPassword());
+                System.out.println(s);
             }
         });
 
@@ -44,8 +46,8 @@ public class UI_Login {
         frame.add(lb2);
         frame.add(lb3);
         frame.add(name);
-        frame.add(pass);
         frame.add(login);
+        frame.add(password);
         frame.setSize(500, 500);
 
 
