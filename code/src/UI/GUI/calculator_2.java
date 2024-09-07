@@ -8,6 +8,7 @@ public class calculator_2 extends javax.swing.JFrame {
     private JTextField txtFiFirst, txtFiSecond, txtResult;
     private JButton btnClear, btnAdd, btnSubtract, btnMultiply, btnDivide;
     public calculator_2(String calculator) {
+        this.setTitle(calculator);
         lblFiFirst = new JLabel("Frist Number");
         lblFiSecond = new JLabel("Second Number");
         lblResult = new JLabel("Result");
@@ -22,7 +23,7 @@ public class calculator_2 extends javax.swing.JFrame {
         this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setDefaultCloseOperation(null);
-//        this.setDefaultCloseOperation(null);
+        this.setLocationRelativeTo(null);
 //        this.setVisible(true);
     }
 

@@ -6,12 +6,14 @@ import java.awt.*;
 public class Example_BoderLayout {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Boder Layout");
+        JLabel lbl = new JLabel("hi");// bi nut button trang ra nen no ko hien thi lbl
         JButton btn1 = new JButton("North");
         JButton btn2 = new JButton("South");
         JButton btn3 = new JButton("East");
         JButton btn4 = new JButton("West");
         JButton btn5 = new JButton("Center");
         btn1.setBackground(Color.cyan);
+//        lbl.setBounds(10, 10, 100, 30);
         btn2.setBackground(Color.cyan);
         btn3.setBackground(Color.cyan);
         btn4.setBackground(Color.cyan);
@@ -20,10 +22,11 @@ public class Example_BoderLayout {
 
 
 
-        frame.setLayout(new BorderLayout());// tránh nút khởi tạo bị tràng viền
+        frame.setLayout(new BorderLayout());// tránh nút khởi tạo bị tràng viền,
         //hgap: khoang cách giữa hàng trên và hàng dươi
         //vgap: hoang cách giữa hàng trái và hàng phải
         //thêm các nút vào vùng chỉ định
+        frame.add(lbl, BorderLayout.NORTH);
         frame.add(btn1, BorderLayout.NORTH);
         frame.add(btn2, BorderLayout.SOUTH);
         frame.add(btn3, BorderLayout.EAST);
