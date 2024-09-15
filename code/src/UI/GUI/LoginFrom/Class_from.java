@@ -43,6 +43,7 @@ public class Class_from extends javax.swing.JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Register_1 reg = new Register_1("Register");
+                Class_from.this.setVisible(false);
             }
         });
 

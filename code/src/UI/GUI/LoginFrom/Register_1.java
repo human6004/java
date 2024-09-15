@@ -1,6 +1,8 @@
 package UI.GUI.LoginFrom;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Register_1 extends JFrame {
     private JLabel lbl1, lbl2, lbl3, lbl4;
@@ -42,6 +44,16 @@ public class Register_1 extends JFrame {
         this.add(txt4);
         this.add(btn1);
 
+
+        btn1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Register_1.this.setVisible(false);
+                Class_from cl = new Class_from("Login");
+                cl.setVisible(true);
+            }
+        });
 
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
